@@ -31,7 +31,7 @@ github_username:  jekyll
 markdown: kramdown
 
 # Build settings
-remote_theme: jekyll-theme-minimal
+remote_theme: benbalter/retlab
 plugins:
   - jekyll-feed
 
