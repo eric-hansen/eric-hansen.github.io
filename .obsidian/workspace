@@ -1,0 +1,104 @@
+{
+  "main": {
+    "id": "2d3210910b4d304c",
+    "type": "split",
+    "children": [
+      {
+        "id": "1bde303d8ce488f6",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "content/welcome-all.md",
+            "mode": "source"
+          }
+        },
+        "group": "4cccda9e946ef0ea"
+      },
+      {
+        "id": "760c5de28c758067",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "content/welcome-all.md",
+            "mode": "preview"
+          }
+        },
+        "group": "4cccda9e946ef0ea"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7f7c2a55a6e33f2f",
+    "type": "split",
+    "children": [
+      {
+        "id": "918588092133e421",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b8ecd3aebb1b7a5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "abc99201ec8ddc55",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a67ebdd4305f73d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f89fbcdec5cfbe5e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db9fd855af488586",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/welcome-all.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "content/welcome-all.md"
+  ]
+}
