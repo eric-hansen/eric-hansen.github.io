@@ -1,40 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric Hansen's Blog of Stuff - misc</title><link href="https://eric-hansen.github.io/" rel="alternate"></link><link href="https://eric-hansen.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://eric-hansen.github.io/</id><updated>2020-11-29T00:00:00-05:00</updated><entry><title>Programmer December 2020 - Day 0</title><link href="https://eric-hansen.github.io/posts/2020/11/29/programmer-december-2020-day-0/" rel="alternate"></link><published>2020-11-29T00:00:00-05:00</published><updated>2020-11-29T00:00:00-05:00</updated><author><name>Eric Hansen</name></author><id>tag:eric-hansen.github.io,2020-11-29:/posts/2020/11/29/programmer-december-2020-day-0/</id><summary type="html">&lt;p&gt;This year&amp;#8217;s adventure is going to be interesting as we explore challenges through &lt;a href="https://www.dailycodingproblem.com/"&gt;Daily Coding Problem&lt;/a&gt;.  As this is something I&amp;#8217;ve never done before (just signed up for these guys today actually), I figured I would spend a Sunday hacking away for a little bit on their problem …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This year&amp;#8217;s adventure is going to be interesting as we explore challenges through &lt;a href="https://www.dailycodingproblem.com/"&gt;Daily Coding Problem&lt;/a&gt;.  As this is something I&amp;#8217;ve never done before (just signed up for these guys today actually), I figured I would spend a Sunday hacking away for a little bit on their problem they just emailed&amp;nbsp;me:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Eric Hansen's Blog of Stuff - misc</title><link href="https://eric-hansen.github.io/" rel="alternate"></link><link href="https://eric-hansen.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://eric-hansen.github.io/</id><updated>2020-11-29T00:00:00-05:00</updated><entry><title>Programmer December 2020 - Day 0</title><link href="https://eric-hansen.github.io/posts/2020/11/29/programmer-december-2020-day-0/" rel="alternate"></link><published>2020-11-29T00:00:00-05:00</published><updated>2020-11-29T00:00:00-05:00</updated><author><name>Eric Hansen</name></author><id>tag:eric-hansen.github.io,2020-11-29:/posts/2020/11/29/programmer-december-2020-day-0/</id><summary type="html">&lt;p&gt;This year&amp;rsquo;s adventure is going to be interesting as we explore challenges through &lt;a href="https://www.dailycodingproblem.com/"&gt;Daily Coding Problem&lt;/a&gt;.  As this is something I&amp;rsquo;ve never done before (just signed up for these guys today actually), I figured I would spend a Sunday hacking away for a little bit on their problem …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This year&amp;rsquo;s adventure is going to be interesting as we explore challenges through &lt;a href="https://www.dailycodingproblem.com/"&gt;Daily Coding Problem&lt;/a&gt;.  As this is something I&amp;rsquo;ve never done before (just signed up for these guys today actually), I figured I would spend a Sunday hacking away for a little bit on their problem they just emailed&amp;nbsp;me:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
 
 For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;These blog entries will be to show my thinking process and workflow through these problems.  I can&amp;#8217;t guarantee I&amp;#8217;ll blog every challenge but will do what I&amp;nbsp;can.&lt;/p&gt;
-&lt;h3&gt;Known&lt;/h3&gt;
+&lt;p&gt;These blog entries will be to show my thinking process and workflow through these problems.  I can&amp;rsquo;t guarantee I&amp;rsquo;ll blog every challenge but will do what I&amp;nbsp;can.&lt;/p&gt;
+&lt;h3 id="known"&gt;Known&lt;/h3&gt;
 &lt;p&gt;I like to start off by listing things that are known (constraints) and unknown, if&amp;nbsp;possible.&lt;/p&gt;
 &lt;p&gt;Here we have a few things we know off the bat:
-* Working with arrays of integers (we&amp;#8217;ll call this A)
+* Working with arrays of integers (we&amp;rsquo;ll call this A)
 * K = sum of any pairs of numbers within A
 * Returns true if any pairs of A[n] + A[o] = K, else false
 * sizeof(A) &amp;gt;= 2, otherwise we cannot check the formula&amp;nbsp;above&lt;/p&gt;
-&lt;h3&gt;Language Choice &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;Why&lt;/h3&gt;
-&lt;p&gt;For this I&amp;#8217;ll solve this in &lt;span class="caps"&gt;PHP&lt;/span&gt;.  It&amp;#8217;s the language I&amp;#8217;m most familiar with and can explain the best.  I&amp;#8217;m not going to count this against my &amp;#8220;use the language only once&amp;#8221; for my&amp;nbsp;challenge.&lt;/p&gt;
-&lt;h3&gt;Step 1:&amp;nbsp;Framework&lt;/h3&gt;
-&lt;p&gt;Here we need a good foundation to solve this problem.  Everything is pretty simple here (and is ranked as &amp;#8220;easy&amp;#8221; by &lt;span class="caps"&gt;DPC&lt;/span&gt;).&lt;/p&gt;
+&lt;h3 id="language choice &amp;amp; why"&gt;Language Choice &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;Why&lt;/h3&gt;
+&lt;p&gt;For this I&amp;rsquo;ll solve this in &lt;span class="caps"&gt;PHP&lt;/span&gt;.  It&amp;rsquo;s the language I&amp;rsquo;m most familiar with and can explain the best.  I&amp;rsquo;m not going to count this against my &amp;ldquo;use the language only once&amp;rdquo; for my&amp;nbsp;challenge.&lt;/p&gt;
+&lt;h3 id="step 1: framework"&gt;Step 1:&amp;nbsp;Framework&lt;/h3&gt;
+&lt;p&gt;Here we need a good foundation to solve this problem.  Everything is pretty simple here (and is ranked as &amp;ldquo;easy&amp;rdquo; by &lt;span class="caps"&gt;DPC&lt;/span&gt;).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;explode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
+&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;explode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;","&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]);&lt;/span&gt;
 &lt;span class="nv"&gt;$k&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
 
-&lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Checking array of [&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nb"&gt;implode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;, &amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;] for sum of &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;$k&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"Checking array of ["&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nb"&gt;implode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;", "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;$a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;"] for sum of "&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;$k&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;So this is what we&amp;#8217;ll start off with.  So how this script will work is like&amp;nbsp;so:&lt;/p&gt;
+&lt;p&gt;So this is what we&amp;rsquo;ll start off with.  So how this script will work is like&amp;nbsp;so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;erich@DESKTOP-HE7V7MB ~/Projects/programmer-december/0
  % php challenge.php 10,15,3,7 17
 Checking array of [10, 15, 3, 7] for sum of 17
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Step 2: Come up with all possible&amp;nbsp;options&lt;/h3&gt;
+&lt;h3 id="step 2: come up with all possible options"&gt;Step 2: Come up with all possible&amp;nbsp;options&lt;/h3&gt;
 &lt;p&gt;This is definitely not going to be a performance-friendly option, but it at least solves the test data&amp;nbsp;effectively.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
@@ -51,54 +45,50 @@ Checking array of [10, 15, 3, 7] for sum of 17
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;We want to get all possible pairs from A[n],A[x] ignoring itself. Which is probably easier to explain&amp;nbsp;visually:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;array(4) {
   [10]=&amp;gt;
   array(3) {
     [0]=&amp;gt;
-    string(2) &amp;quot;15&amp;quot;
+    string(2) "15"
     [1]=&amp;gt;
-    string(1) &amp;quot;3&amp;quot;
+    string(1) "3"
     [2]=&amp;gt;
-    string(1) &amp;quot;7&amp;quot;
+    string(1) "7"
   }
   [15]=&amp;gt;
   array(3) {
     [0]=&amp;gt;
-    string(2) &amp;quot;10&amp;quot;
+    string(2) "10"
     [1]=&amp;gt;
-    string(1) &amp;quot;3&amp;quot;
+    string(1) "3"
     [2]=&amp;gt;
-    string(1) &amp;quot;7&amp;quot;
+    string(1) "7"
   }
   [3]=&amp;gt;
   array(3) {
     [0]=&amp;gt;
-    string(2) &amp;quot;10&amp;quot;
+    string(2) "10"
     [1]=&amp;gt;
-    string(2) &amp;quot;15&amp;quot;
+    string(2) "15"
     [2]=&amp;gt;
-    string(1) &amp;quot;7&amp;quot;
+    string(1) "7"
   }
   [7]=&amp;gt;
   array(3) {
     [0]=&amp;gt;
-    string(2) &amp;quot;10&amp;quot;
+    string(2) "10"
     [1]=&amp;gt;
-    string(2) &amp;quot;15&amp;quot;
+    string(2) "15"
     [2]=&amp;gt;
-    string(1) &amp;quot;3&amp;quot;
+    string(1) "3"
   }
 }
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;So each root element of &lt;code&gt;$pairs&lt;/code&gt; will be the starting (A[n]) and that holds an array of possible values for&amp;nbsp;A[x].&lt;/p&gt;
-&lt;p&gt;Now, we can either make this simple (which I&amp;#8217;ll show here), or we can carry this a bit further which I&amp;#8217;ll demonstrate&amp;nbsp;second.&lt;/p&gt;
-&lt;h3&gt;Step 3: Simple&amp;nbsp;Solution&lt;/h3&gt;
-&lt;p&gt;Here&amp;#8217;s the simple&amp;nbsp;solution:&lt;/p&gt;
+&lt;p&gt;Now, we can either make this simple (which I&amp;rsquo;ll show here), or we can carry this a bit further which I&amp;rsquo;ll demonstrate&amp;nbsp;second.&lt;/p&gt;
+&lt;h3 id="step 3: simple solution"&gt;Step 3: Simple&amp;nbsp;Solution&lt;/h3&gt;
+&lt;p&gt;Here&amp;rsquo;s the simple&amp;nbsp;solution:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="nv"&gt;$found&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -112,16 +102,14 @@ Checking array of [10, 15, 3, 7] for sum of 17
   &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 
-&lt;span class="k"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Found a pair that sums to &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;$k&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;? &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$found&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Yes&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;No&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;echo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Found a pair that sums to "&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="nv"&gt;$k&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;"? "&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$found&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="s2"&gt;"Yes"&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;"No"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Instead of cycling through all possible options we just need to know if one match is found.  If so, lets inform the&amp;nbsp;runner.&lt;/p&gt;
 &lt;p&gt;This is pretty simple.  Now for the over engineered&amp;nbsp;one!&lt;/p&gt;
-&lt;h3&gt;Step 4: Over-Engineered&amp;nbsp;Solution&lt;/h3&gt;
-&lt;p&gt;Not too different than the above, it&amp;#8217;s just moving some logic around&amp;nbsp;primarily:&lt;/p&gt;
+&lt;h3 id="step 4: over-engineered solution"&gt;Step 4: Over-Engineered&amp;nbsp;Solution&lt;/h3&gt;
+&lt;p&gt;Not too different than the above, it&amp;rsquo;s just moving some logic around&amp;nbsp;primarily:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="k"&gt;foreach&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$a&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nv"&gt;$pos&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;$val&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -144,16 +132,14 @@ Checking array of [10, 15, 3, 7] for sum of 17
 &lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="cp"&gt;?&amp;gt;&lt;/span&gt;&lt;span class="x"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Here we use &lt;code&gt;array_walk&lt;/code&gt; to step through the &lt;code&gt;$pairs&lt;/code&gt; array, then create a lambda/closure to finish processing all the&amp;nbsp;values.&lt;/p&gt;
 &lt;p&gt;Both solutions warran the exected&amp;nbsp;outcome:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;erich@DESKTOP-HE7V7MB ~/Projects/programmer-december/0
  % php challenge.php 10,15,3,7 17
 Checking array of [10, 15, 3, 7] for sum of 17
 Found a pair that sums to 17? Yes
-&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Welcome All</title><link href="https://eric-hansen.github.io/posts/2020/11/25/welcome-all/" rel="alternate"></link><published>2020-11-25T19:07:00-05:00</published><updated>2020-11-25T19:07:00-05:00</updated><author><name>Eric Hansen</name></author><id>tag:eric-hansen.github.io,2020-11-25:/posts/2020/11/25/welcome-all/</id><summary type="html">&lt;p&gt;The blog of a lifetime!  Maybe&amp;#8230;&amp;nbsp;:D&lt;/p&gt;
-&lt;p&gt;I mostly plan on using this blog space for programming notes, challenges, etc&amp;#8230;  I&amp;#8217;ll probably also share Christianity related stuff as well as&amp;nbsp;desired.&lt;/p&gt;
-&lt;p&gt;To start I plan on doing a new-language-a-day marathon in December that I&amp;#8217;m calling Programmer&amp;nbsp;December.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The blog of a lifetime!  Maybe&amp;#8230;&amp;nbsp;:D&lt;/p&gt;
-&lt;p&gt;I mostly plan on using this blog space for programming notes, challenges, etc&amp;#8230;  I&amp;#8217;ll probably also share Christianity related stuff as well as&amp;nbsp;desired.&lt;/p&gt;
-&lt;p&gt;To start I plan on doing a new-language-a-day marathon in December that I&amp;#8217;m calling Programmer&amp;nbsp;December.&lt;/p&gt;</content></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Welcome All</title><link href="https://eric-hansen.github.io/posts/2020/11/25/welcome-all/" rel="alternate"></link><published>2020-11-25T19:07:00-05:00</published><updated>2020-11-25T19:07:00-05:00</updated><author><name>Eric Hansen</name></author><id>tag:eric-hansen.github.io,2020-11-25:/posts/2020/11/25/welcome-all/</id><summary type="html">&lt;p&gt;The blog of a lifetime!  Maybe&amp;hellip;&amp;nbsp;:D&lt;/p&gt;
+&lt;p&gt;I mostly plan on using this blog space for programming notes, challenges, etc&amp;hellip;  I&amp;rsquo;ll probably also share Christianity related stuff as well as&amp;nbsp;desired.&lt;/p&gt;
+&lt;p&gt;To start I plan on doing a new-language-a-day marathon in December that I&amp;rsquo;m calling Programmer&amp;nbsp;December.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The blog of a lifetime!  Maybe&amp;hellip;&amp;nbsp;:D&lt;/p&gt;
+&lt;p&gt;I mostly plan on using this blog space for programming notes, challenges, etc&amp;hellip;  I&amp;rsquo;ll probably also share Christianity related stuff as well as&amp;nbsp;desired.&lt;/p&gt;
+&lt;p&gt;To start I plan on doing a new-language-a-day marathon in December that I&amp;rsquo;m calling Programmer&amp;nbsp;December.&lt;/p&gt;</content></entry></feed>
