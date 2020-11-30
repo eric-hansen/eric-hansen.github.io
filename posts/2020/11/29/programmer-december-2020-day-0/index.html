@@ -142,16 +142,20 @@ Checking array of [10, 15, 3, 7] for sum of 17
 
 <h3>Step 2: Come up with all possible&nbsp;options</h3>
 <p>This is definitely not going to be a performance-friendly option, but it at least solves the test data&nbsp;effectively.</p>
-<div class="highlight"><pre><span></span><span class="x">$pairs = [];</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="o">...</span>
+<span class="nv">$pairs</span> <span class="o">=</span> <span class="p">[];</span>
 
-<span class="x">foreach ($a as $pos =&gt; $val) {</span>
-<span class="x">  foreach ($a as $subPos =&gt; $subVal) {</span>
-<span class="x">    if ($subPos != $pos) {</span>
-<span class="x">       if (!isset($pairs[$val])) $pairs[$val] = [];</span>
-<span class="x">        $pairs[$val][] = $subVal;</span>
-<span class="x">    }</span>
-<span class="x">  }</span>
-<span class="x">}</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$pos</span> <span class="o">=&gt;</span> <span class="nv">$val</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$subPos</span> <span class="o">=&gt;</span> <span class="nv">$subVal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$subPos</span> <span class="o">!=</span> <span class="nv">$pos</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$pairs</span><span class="p">[</span><span class="nv">$val</span><span class="p">]))</span> <span class="nv">$pairs</span><span class="p">[</span><span class="nv">$val</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="nv">$pairs</span><span class="p">[</span><span class="nv">$val</span><span class="p">][]</span> <span class="o">=</span> <span class="nv">$subVal</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="o">...</span>
+<span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
 
@@ -201,18 +205,22 @@ Checking array of [10, 15, 3, 7] for sum of 17
 <p>Now, we can either make this simple (which I&#8217;ll show here), or we can carry this a bit further which I&#8217;ll demonstrate&nbsp;second.</p>
 <h3>Step 3: Simple&nbsp;Solution</h3>
 <p>Here&#8217;s the simple&nbsp;solution:</p>
-<div class="highlight"><pre><span></span><span class="x">$found = false;</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="o">...</span>
+<span class="nv">$found</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
 
-<span class="x">foreach ($a as $pos =&gt; $val) {</span>
-<span class="x">  foreach ($a as $subPos =&gt; $subVal) {</span>
-<span class="x">    if (($val + $subVal) == $k) {</span>
-<span class="x">      $found = true;</span>
-<span class="x">      break;</span>
-<span class="x">    }</span>
-<span class="x">  }</span>
-<span class="x">}</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$pos</span> <span class="o">=&gt;</span> <span class="nv">$val</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$subPos</span> <span class="o">=&gt;</span> <span class="nv">$subVal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">((</span><span class="nv">$val</span> <span class="o">+</span> <span class="nv">$subVal</span><span class="p">)</span> <span class="o">==</span> <span class="nv">$k</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$found</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="x">echo(&quot;Found a pair that sums to &quot; . $k . &quot;? &quot; . ($found ? &quot;Yes&quot; : &quot;No&quot;) . &quot;\n&quot;);</span>
+<span class="k">echo</span><span class="p">(</span><span class="s2">&quot;Found a pair that sums to &quot;</span> <span class="o">.</span> <span class="nv">$k</span> <span class="o">.</span> <span class="s2">&quot;? &quot;</span> <span class="o">.</span> <span class="p">(</span><span class="nv">$found</span> <span class="o">?</span> <span class="s2">&quot;Yes&quot;</span> <span class="o">:</span> <span class="s2">&quot;No&quot;</span><span class="p">)</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">);</span>
+<span class="o">...</span>
+<span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
 
@@ -220,23 +228,27 @@ Checking array of [10, 15, 3, 7] for sum of 17
 <p>This is pretty simple.  Now for the over engineered&nbsp;one!</p>
 <h3>Step 4: Over-Engineered&nbsp;Solution</h3>
 <p>Not too different than the above, it&#8217;s just moving some logic around&nbsp;primarily:</p>
-<div class="highlight"><pre><span></span><span class="x">foreach ($a as $pos =&gt; $val) {</span>
-<span class="x">  foreach ($a as $subPos =&gt; $subVal) {</span>
-<span class="x">       if (!isset($pairs[$val])) $pairs[$val] = [];</span>
-<span class="x">        $pairs[$val][] = $subVal;</span>
-<span class="x">  }</span>
-<span class="x">}</span>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="o">...</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$pos</span> <span class="o">=&gt;</span> <span class="nv">$val</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$a</span> <span class="k">as</span> <span class="nv">$subPos</span> <span class="o">=&gt;</span> <span class="nv">$subVal</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$pairs</span><span class="p">[</span><span class="nv">$val</span><span class="p">]))</span> <span class="nv">$pairs</span><span class="p">[</span><span class="nv">$val</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="nv">$pairs</span><span class="p">[</span><span class="nv">$val</span><span class="p">][]</span> <span class="o">=</span> <span class="nv">$subVal</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-<span class="x">array_walk($pairs, function ($subVals, $val) use (&amp;$found, $k) {</span>
-<span class="x">  if ($found) return;</span>
+<span class="nb">array_walk</span><span class="p">(</span><span class="nv">$pairs</span><span class="p">,</span> <span class="k">function</span> <span class="p">(</span><span class="nv">$subVals</span><span class="p">,</span> <span class="nv">$val</span><span class="p">)</span> <span class="k">use</span> <span class="p">(</span><span class="o">&amp;</span><span class="nv">$found</span><span class="p">,</span> <span class="nv">$k</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$found</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
 
-<span class="x">  foreach ($subVals as $subVal) {</span>
-<span class="x">    if (($val + $subVal) == $k) {</span>
-<span class="x">      $found = true;</span>
-<span class="x">      break;</span>
-<span class="x">    }</span>
-<span class="x">  }</span>
-<span class="x">});</span>
+  <span class="k">foreach</span> <span class="p">(</span><span class="nv">$subVals</span> <span class="k">as</span> <span class="nv">$subVal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">((</span><span class="nv">$val</span> <span class="o">+</span> <span class="nv">$subVal</span><span class="p">)</span> <span class="o">==</span> <span class="nv">$k</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nv">$found</span> <span class="o">=</span> <span class="k">true</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+<span class="o">...</span>
+<span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
 
