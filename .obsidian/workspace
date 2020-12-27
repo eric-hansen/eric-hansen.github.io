@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "content/welcome-all.md",
+            "file": "content/programmer-december-2020-day-1.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "content/welcome-all.md",
+            "file": "content/programmer-december-2020-day-1.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/welcome-all.md",
+                "file": "content/programmer-december-2020-day-1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +99,8 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "content/programmer-december-2020-day-1.md",
+    "content/programmer-december-2020-day-0.md",
     "content/welcome-all.md"
   ]
 }

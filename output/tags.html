@@ -10,20 +10,27 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://eric-hansen.github.io/theme/stylesheet/style.min.css">
 
     <link id="dark-theme-style" rel="stylesheet" type="text/css"
-    href="/theme/stylesheet/dark-theme.min.css">
+    href="https://eric-hansen.github.io/theme/stylesheet/dark-theme.min.css">
 
     <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
-          href="/theme/pygments/monokai.min.css">
+          href="https://eric-hansen.github.io/theme/pygments/monokai.min.css">
+
+    <script src="https://eric-hansen.github.io/theme/tipuesearch/jquery.min.js"></script>
+    <script src="https://eric-hansen.github.io/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://eric-hansen.github.io/theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="https://eric-hansen.github.io/theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="https://eric-hansen.github.io/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="https://eric-hansen.github.io/theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://eric-hansen.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://eric-hansen.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://eric-hansen.github.io/theme/font-awesome/css/solid.css">
 
 
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
-
-
+    <link href="https://eric-hansen.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Eric Hansen's Blog of Stuff Atom">
 
 
 
@@ -36,7 +43,8 @@
 <meta property="og:title" content="Eric Hansen's Blog of Stuff"/>
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content=""/>
+<meta property="og:url" content="https://eric-hansen.github.io"/>
+<meta property="og:image" content="https://en.gravatar.com/userimage/184664409/2278f2b94cafeb6089594b6ec3c2d0a6.jpg?size=200">
 
   <title>Eric Hansen's Blog of Stuff &ndash; Tags</title>
 
@@ -44,35 +52,19 @@
 <body class="dark-theme">
   <aside>
     <div>
-      <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
+      <a href="https://eric-hansen.github.io">
+        <img src="https://en.gravatar.com/userimage/184664409/2278f2b94cafeb6089594b6ec3c2d0a6.jpg?size=200" alt="" title="">
       </a>
 
       <h1>
-        <a href=""></a>
+        <a href="https://eric-hansen.github.io"></a>
       </h1>
 
 
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
 
-      <nav>
-        <ul class="list">
-
-
-
-            <li>
-              <a target="_self" href="http://getpelican.com/" >Pelican</a>
-            </li>
-            <li>
-              <a target="_self" href="http://python.org/" >Python.org</a>
-            </li>
-            <li>
-              <a target="_self" href="http://jinja.pocoo.org/" >Jinja2</a>
-            </li>
-            <li>
-              <a target="_self" href="#" >You can modify those links in your config file</a>
-            </li>
-        </ul>
-      </nav>
 
       <ul class="social">
           <li>
@@ -92,12 +84,13 @@
   <main>
 
     <nav>
-      <a href="">Home</a>
+      <a href="https://eric-hansen.github.io">Home</a>
 
       <a href="/archives.html">Archives</a>
       <a href="/categories.html">Categories</a>
       <a href="/tags.html">Tags</a>
 
+      <a href="https://eric-hansen.github.io/feeds/all.atom.xml">Atom</a>
 
     </nav>
 
@@ -111,7 +104,7 @@
 </article>
 
     <footer>
-<p>&copy;  </p>
+<p>&copy; 2020 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p>    </footer>
@@ -125,12 +118,17 @@ Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a 
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " Eric Hansen's Blog of Stuff ",
-  "url" : "",
-  "image": "",
+  "url" : "https://eric-hansen.github.io",
+  "image": "https://en.gravatar.com/userimage/184664409/2278f2b94cafeb6089594b6ec3c2d0a6.jpg?size=200",
   "description": ""
 }
 </script>
 
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
 
 </body>
 </html>
