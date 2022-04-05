@@ -1,9 +1,9 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "/home/runner/work/eric-hansen.github.io/eric-hansen.github.io",
+	"sourceRoot": "/home/runner/work/eric-hansen.github.io/eric-hansen.github.io/site",
 	"sources": [
-		"themes/hugo-theme-monochrome/assets/scss/core.scss",
+		"/home/runner/work/eric-hansen.github.io/eric-hansen.github.io/themes/hugo-theme-monochrome/assets/scss/core.scss",
 		"themes/hugo-theme-monochrome/assets/scss/purecss/_base.scss",
 		"themes/hugo-theme-monochrome/assets/scss/mixins/text.scss",
 		"themes/hugo-theme-monochrome/assets/scss/mixins/margin.scss",
