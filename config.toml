@@ -1,0 +1,4 @@
+baseURL = 'https://eric-hansen.github.io/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hugo-theme-monochrome"
