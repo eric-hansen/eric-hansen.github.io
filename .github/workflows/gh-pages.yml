@@ -29,19 +29,19 @@ jobs:
           node-version: '12'
 
       - name: Composite package.json
-        run: hugo -s exampleSite --themesDir=../.. mod npm pack
+        run: hugo -s . --themesDir=../.. mod npm pack
 
       - name: Setup Dependency
-        run: npm install --prefix exampleSite
+        run: npm install
 
       - name: Setup public
-        run: git worktree add -B gh-pages ./exampleSite/public origin/gh-pages
+        run: git worktree add -B gh-pages ./public origin/gh-pages
 
       - name: Clean public
-        run: rm -rf ./exampleSite/public/*
+        run: rm -rf ./public/*
 
       - name: Build
-        run: hugo -s exampleSite --themesDir=../.. --minify --environment production -b https://kaiiiz.github.io/hugo-theme-monochrome
+        run: hugo -s . --themesDir=../.. --minify --environment production -b https://kaiiiz.github.io/hugo-theme-monochrome
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -49,5 +49,5 @@ jobs:
           #github_token: ${{ secrets.ACCESS_TOKEN }}
           #deploy_key: ${{ secrets.SSH_PRIVATE }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./exampleSite/public
+          publish_dir: ./public
           publish_branch: gh-pages
