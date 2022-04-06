@@ -1,10 +1,12 @@
 baseURL = 'https://eric-hansen.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Blog/Site/Thingy'
 theme = "hugo-theme-monochrome"
 hasCJKLanguage = true
 defaultContentLanguage = "en"
 enableEmoji = true
+enableGitInfo = true
+enableInlineShortcodes = true
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
