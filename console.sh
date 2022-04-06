@@ -4,6 +4,10 @@ CMD="$1"
 
 shift
 
+_hugo_cmd () {
+    hugo -s site --themesDir=../themes "$@"
+}
+
 hugo_new_post () {
     FOLDER_TS=$(date +%Y/%m)
     FILE_PARTS="$@"
@@ -13,14 +17,20 @@ hugo_new_post () {
 
     mkdir -p site/content/posts/$FOLDER_TS
 
-    hugo new -s site -k posts --themesDir=../themes posts/$FOLDER_TS/$FILE.md
+    _hugo_cmd -k posts posts/$FOLDER_TS/$FILE.md
+}
+
+hugo_serve () {
+    _hugo_cmd serve
 }
 
 case "$CMD" in
     new_post)
     hugo_new_post "$@"
     ;;
-
+    serve)
+    hugo_serve "$@"
+    ;;
     *)
     echo "Unknown command: $CMD"
     exit 1
