@@ -1,5 +1,4 @@
 ---
-title: Posts
 type: postcard
 ---
 
